@@ -1,65 +1,78 @@
-import Image from "next/image";
+import type { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: 'えいごスタートラボ｜ご案内ページ',
+  description:
+    '小学生のうちに中学英語を先取り。在校生・ご兄弟の方／はじめての方それぞれにご案内をご用意しています。',
+}
+
+export default function Page() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-white px-5 py-10">
+      <div className="max-w-lg mx-auto">
+        <header className="text-center mb-8">
+          <Image
+            src="/eigo_pink_image.png"
+            alt=""
+            width={96}
+            height={96}
+            className="mx-auto mb-4"
+            priority
+          />
+          <h1 className="text-[#D94F8A] font-black text-2xl mb-3">
+            えいごスタートラボ
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-[#333333] text-sm">
+            ご案内ページをお選びください
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        </header>
+
+        <div className="space-y-4">
+          <Link
+            href="/current"
+            className="block bg-[#D94F8A] text-white rounded-2xl p-6 shadow-md hover:shadow-lg active:scale-[0.99] transition-all"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            <p className="text-xs font-bold mb-1 opacity-90">
+              対象：そろばん生・塾生・ご兄弟
+            </p>
+            <h2 className="text-lg font-black mb-3 leading-snug">
+              在校生・ご兄弟のご家族へ
+            </h2>
+            <ul className="space-y-1.5 mb-4 text-sm">
+              <li>✓ 2ヶ月分授業料 無料</li>
+              <li>✓ 初回英検検定料 全額負担</li>
+            </ul>
+            <span className="inline-flex items-center gap-2 text-sm font-bold">
+              こちらのご案内へ <span aria-hidden>→</span>
+            </span>
+          </Link>
+
+          <Link
+            href="/new"
+            className="block bg-white border-2 border-[#D94F8A] text-[#D94F8A] rounded-2xl p-6 shadow-md hover:shadow-lg active:scale-[0.99] transition-all"
           >
-            Documentation
-          </a>
+            <p className="text-xs font-bold mb-1 opacity-80">
+              対象：外部からご検討の方
+            </p>
+            <h2 className="text-lg font-black mb-3 leading-snug">
+              はじめての方へ
+            </h2>
+            <ul className="space-y-1.5 mb-4 text-sm">
+              <li>✓ 1ヶ月分授業料 無料体験</li>
+              <li>✓ 英検準会場として今夏始動</li>
+            </ul>
+            <span className="inline-flex items-center gap-2 text-sm font-bold">
+              こちらのご案内へ <span aria-hidden>→</span>
+            </span>
+          </Link>
         </div>
-      </main>
-    </div>
-  );
+
+        <footer className="mt-10 text-center text-xs text-gray-500">
+          📍 前原駅前校　月・水・木・金 17:05〜18:05
+        </footer>
+      </div>
+    </main>
+  )
 }
