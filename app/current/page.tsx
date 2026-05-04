@@ -3,6 +3,7 @@ import { Hero } from '@/app/_components/Hero'
 import { Empathy } from '@/app/_components/Empathy'
 import { ThreeFeatures } from '@/app/_components/ThreeFeatures'
 import { EikenVenue } from '@/app/_components/EikenVenue'
+import { PriceSection } from '@/app/_components/PriceSection'
 import { BenefitsCurrent } from '@/app/_components/BenefitsCurrent'
 import { FAQ, type QAItem } from '@/app/_components/FAQ'
 import { FormSection } from '@/app/_components/FormSection'
@@ -34,6 +35,14 @@ const QA_ITEMS: QAItem[] = [
     q: '英検の検定料負担は何回まで対象ですか？',
     a: '初めて英検を受験される際の1回のみ、検定料を全額負担いたします。2回目以降は通常の検定料となります。受験級は学習進度をふまえてご相談のうえ決定します。',
   },
+  {
+    q: '月謝のほかに費用はかかりますか？',
+    a: '月謝3,800円には教材費も含まれます。追加費用は一切いただきません。維持管理費は2,200円となります（先行予約特典の2ヶ月無料期間中は無料）。',
+  },
+  {
+    q: '在校生の維持管理費はどう変わりますか？',
+    a: '英語クラスをご受講いただく場合、維持管理費は2,200円となります。塾生のご家族は現行と変わりません。そろばん生のご家族は現行1,320円から2,200円に変更となるため、差額880円/月のご負担となります。ご兄弟枠の片方免除制度は継続します。なお、先行予約特典の2ヶ月無料期間中は、これらすべてを含めて完全無料です。',
+  },
 ]
 
 export default function CurrentPage() {
@@ -58,6 +67,7 @@ export default function CurrentPage() {
       <Empathy />
       <ThreeFeatures />
       <EikenVenue variant="current" />
+      <PriceSection variant="current" />
       <BenefitsCurrent />
       <FAQ items={QA_ITEMS} />
       <FormSection variant="current" />

@@ -3,7 +3,7 @@ import { Hero } from '@/app/_components/Hero'
 import { Empathy } from '@/app/_components/Empathy'
 import { ThreeFeatures } from '@/app/_components/ThreeFeatures'
 import { EikenVenue } from '@/app/_components/EikenVenue'
-import { BenefitsNew } from '@/app/_components/BenefitsNew'
+import { PriceSection } from '@/app/_components/PriceSection'
 import { FAQ, type QAItem } from '@/app/_components/FAQ'
 import { FormSection } from '@/app/_components/FormSection'
 
@@ -34,6 +34,10 @@ const QA_ITEMS: QAItem[] = [
     q: '英検は教室で受験できますか？',
     a: 'はい。当教室は日本英語検定協会の準会場として登録されており、今年の夏より教室にて英検試験の実施を開始します。慣れた教室で受験いただけます。',
   },
+  {
+    q: '月謝のほかに費用はかかりますか？',
+    a: '月謝の中に教材費も含まれます。追加費用は一切いただきません。月額は授業料3,800円＋維持管理費2,200円の計6,000円、入会金は通常22,000円のところ特別価格5,500円です。なお、初めての方限定で初月の月謝（6,000円）は完全無料となります。',
+  },
 ]
 
 export default function NewPage() {
@@ -49,13 +53,16 @@ export default function NewPage() {
           </>
         }
         subtitle="小学生のうちに中学英語を先取りすることが、入学後の一番の自信になります。"
-        perkLabels={['初めての方限定｜1ヶ月分授業料 無料体験']}
+        perkLabels={[
+          '初めての方限定｜1ヶ月無料体験（6,000円相当）',
+          '入会金 22,000円 → 5,500円',
+        ]}
         ctaLabel="無料体験を申し込む"
       />
       <Empathy />
       <ThreeFeatures />
       <EikenVenue variant="new" />
-      <BenefitsNew />
+      <PriceSection variant="new" />
       <FAQ items={QA_ITEMS} />
       <FormSection variant="new" />
     </main>

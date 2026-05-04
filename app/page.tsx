@@ -60,7 +60,8 @@ export default function Page() {
               はじめての方へ
             </h2>
             <ul className="space-y-1.5 mb-4 text-sm">
-              <li>✓ 1ヶ月分授業料 無料体験</li>
+              <li>✓ 1ヶ月無料体験（6,000円相当）</li>
+              <li>✓ 入会金 22,000円→5,500円</li>
               <li>✓ 英検準会場として今夏始動</li>
             </ul>
             <span className="inline-flex items-center gap-2 text-sm font-bold">
