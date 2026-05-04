@@ -33,6 +33,16 @@ export function FormSection({ variant }: { variant: Variant }) {
           </p>
         )}
 
+        {isNew && (
+          <p className="text-white text-xs text-center mb-6 leading-relaxed bg-white/10 rounded-lg px-4 py-3">
+            そろばん生・塾生・ご兄弟のご家族は、
+            <Link href="/current" className="underline font-bold">
+              在校生限定のご案内
+            </Link>
+            をご覧ください。
+          </p>
+        )}
+
         <ReservationForm variant={variant} />
 
         {isNew && (
