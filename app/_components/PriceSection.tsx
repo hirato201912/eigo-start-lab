@@ -22,18 +22,22 @@ export function PriceSection({ variant }: { variant: Variant }) {
 
           <div className="bg-gray-50 rounded-xl px-5 py-4 text-sm text-[#333333] leading-relaxed mb-4">
             <p className="font-bold mb-2">維持管理費について</p>
-            <ul className="space-y-1.5 text-xs leading-relaxed">
+            <p className="text-xs text-gray-600 mb-3">
+              維持管理費は1家族につき2,200円（家族単位で計算されます）
+            </p>
+            <ul className="space-y-2 text-xs leading-relaxed">
               <li>
-                ・<strong>塾生</strong>のご家族：現行と変わりません（2,200円）
+                ・<strong>塾生</strong>：現行2,200円のまま
+                <span className="text-gray-600">（追加なし）</span>
               </li>
               <li>
-                ・<strong>そろばん生</strong>のご家族：現行1,320円 → 2,200円
-                <span className="text-[#D94F8A] font-bold">
-                  （差額880円のご負担）
-                </span>
+                ・<strong>そろばん生</strong>：現行1,320円 → 2,200円
+                <span className="text-[#D94F8A] font-bold">（差額880円のみ）</span>
               </li>
-              <li>・ご兄弟枠の片方免除の制度は継続します</li>
             </ul>
+            <p className="text-xs text-gray-600 mt-3 leading-relaxed">
+              ※ご兄弟が英語クラスを受講される場合も、家族単位で同じ扱いです（塾生のご兄弟は追加なし、そろばん生のご兄弟は差額880円のみ）
+            </p>
           </div>
 
           <div className="bg-[#FFF0F7] border-2 border-[#D94F8A] rounded-2xl p-5 text-center">

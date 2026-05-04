@@ -14,7 +14,7 @@ export default function Page() {
       <div className="max-w-lg mx-auto">
         <header className="text-center mb-8">
           <Image
-            src="/eigo_pink_image.png"
+            src="/eigo_star.png"
             alt=""
             width={96}
             height={96}
@@ -62,7 +62,7 @@ export default function Page() {
             <ul className="space-y-1.5 mb-4 text-sm">
               <li>✓ 1ヶ月無料体験（6,000円相当）</li>
               <li>✓ 入会金 22,000円→5,500円</li>
-              <li>✓ 英検準会場として今夏始動</li>
+              <li>✓ 英検準会場として今秋以降始動</li>
             </ul>
             <span className="inline-flex items-center gap-2 text-sm font-bold">
               こちらのご案内へ <span aria-hidden>→</span>
